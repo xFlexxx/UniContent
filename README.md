@@ -22,7 +22,7 @@ UniContent/
 ├── UniContent/               # Core application directory
 │   ├── _images/              # Internal images
 │   ├── _styles/              # Internal styles
-│   ├── output/               # Generated output files
+│   ├── output/               # Generated news output files
 │   │   ├── _images/
 │   │   ├── _styles/
 │   │   └── uploads/
