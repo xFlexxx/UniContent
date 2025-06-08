@@ -1,0 +1,77 @@
+/*****************************
+ Table's styles for calendar
+ -----
+ Modify: 22.02.2007
+
+ *****************************/
+TD.month {
+	margin: 0;
+	padding: 5px 0 5px 0;
+	border-style: none;
+	background: #FFFFFF;
+	text-align: center;
+	font: bold 10pt Arial;
+}
+TD.calendar {
+	margin: 0;
+	padding: 1px;
+	border-style: none;
+	text-align: center;
+}
+TD.day-week {
+	width: 40px;
+	margin: 0;
+	padding: 1px;
+	border-style: solid none solid none;
+	border-width: 1px;
+	border-color: #000000;
+	text-align: center;
+}
+TD.weeks {
+	width: 20px;
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	text-align: center;
+	background: #FAF2E0;
+	color: #427B7E;
+}
+TD.weeks-study {
+	width: 20px;
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	text-align: center;
+	background: #E8E8E8;
+}
+TD.frame-left {
+	margin: 0;
+	padding: 0;
+	border-style: none none none solid;
+	border-width: 1px;
+	border-color: #000000;
+	text-align: center;
+}
+TD.frame-right {
+	margin: 0;
+	padding: 0;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-color: #000000;
+	text-align: center;
+}
+TD.frame-bottom {
+	margin: 0;
+	padding: 0;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: #000000;
+	text-align: center;
+}
+.center {
+	margin: 0;
+	padding: 0 10px 10px 10px;
+	border-style: none;
+	vertical-align: top;
+	text-align: center;
+}

@@ -1,0 +1,434 @@
+/*****************************
+ Table' styles for template
+ computer_page.dwt
+ -----
+ Modify: 19.02.2007
+
+ *****************************/
+BODY {
+	margin: 0;
+	padding: 0;
+}
+TABLE.tpl-skeleton {
+	width: 100%;
+}
+TD.tpl-left-framegap {
+	width: 30px;
+	margin: 0;
+	padding: 0;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	background: #F8F8F8;
+	vertical-align: top;
+	text-align: right;
+}
+TD.tpl-logo {
+	width: 150px;
+	margin: 0;
+	padding: 20px 0 0 0;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-color: #279999;
+	vertical-align: top;
+	text-align: center;
+}
+TD.tpl-header {
+	margin: 0;
+	padding: 20px 20px 0 0;
+	border-style: none none none solid;
+	border-width: 5px;
+	border-color: #F7F7E8;
+	background-image: url(./../_images/fon_header.gif);
+	background-repeat: repeat-x;
+	background-position: left center;
+	vertical-align: top;
+	text-align: right;
+	font: 10pt Verdana;
+}
+TD.tpl-menu-services {
+	width: 100px;
+	margin: 0;
+	padding: 20px 0 0 0;
+	border-style: none;
+	vertical-align: top;
+	text-align: center;
+}
+TD.tpl-right-framegap {
+	width: 30px;
+	margin: 0;
+	padding: 0;
+	border-style: none none none solid;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	background: #F8F8F8;
+	vertical-align: top;
+	text-align: left;
+}
+TD.tpl-left-band {
+	width: 150px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-color: #279999;
+	vertical-align: top;
+	text-align: center;
+	background-image: url(./../_images/fon_left_band.gif);
+	background-repeat: repeat-y;
+	background-position: right;
+}
+TD.tpl-menu-page {
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	border-style: none none none solid;
+	border-width: 5px;
+	border-color: #0D4646;
+	vertical-align: bottom;
+	text-align: right;
+	background: #277777;
+}
+TD.tpl-right-band {
+	width: 100px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	vertical-align: top;
+	text-align: left;
+	background: #0D4646;
+}
+TD.tpl-menu-cat {
+	width: 150px;
+	margin: 0;
+	padding: 10px 0;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	vertical-align: top;
+	text-align: right;
+}
+TD.tpl-content {
+	margin: 0;
+	padding: 20px 30px 20px 30px;
+	border-style: none none none solid;
+	border-width: 5px;
+	border-color: #F7F7E8;
+	vertical-align: top;
+	text-align: left;
+}
+TD.tpl-bookmarks {
+	width: 100px;
+	margin: 0;
+	border-style: none;
+	vertical-align: top;
+	text-align: center;
+}
+TD.tpl-creators {
+	width: 130px;
+	margin: 0;
+	padding: 0 20px;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-color: #279999;
+	vertical-align: center;
+	text-align: center;
+	background: #E8E8E8;
+	font: 10pt Arial !important;
+}
+TD.tpl-copyright {
+	margin: 0;
+	padding: 15px 20px 15px 20px;
+	border-style: none none none solid;
+	border-width: 5px;
+	border-color: #0D4646;
+	vertical-align: center;
+	text-align: left;
+	background: #277777;
+	font: 10pt Arial !important;
+	color: #FFFFFF;
+}
+TD.tpl-counter {
+	width: 100px;
+	margin: 0;
+	padding: 0 5px;
+	border-style: none;
+	vertical-align: center;
+	text-align: center;
+	background: #0D4646;
+}
+
+/* -------------- */
+/* Framegap       */
+/* -------------- */
+IMG.tpl-list-shadow {
+	border-style: none;
+}
+
+/* -------------- */
+/* Header         */
+/* -------------- */
+DIV.tpl-header {
+	width: 100%;
+	height: 60px;
+	background-image: url('../_images/fon_header.jpg');
+	background-repeat: no-repeat;
+}
+IMG.tpl-logo {
+	margin: 0 0 5px 0;
+	border-style: none;
+}
+SPAN.tpl-header {
+	font: bolder 12pt Verdana;
+	color: #0D4646;
+}
+A.tpl-header:link {
+	font: 12pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-header:visited {
+	font: 12pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-header:active {
+	font: 12pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-header:hover {
+	font: 12pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+
+/* -------------- */
+/* Menu services  */
+/* -------------- */
+IMG.tpl-menu-services {
+	width: 22px;
+	height: 22px;
+	margin: 0 5px 0 0;
+	border-style: none;
+}
+
+/* -------------- */
+/* Menu page      */
+/* -------------- */
+A.tpl-menu-page:link {
+	margin: 0 5px 0 5px; 
+	font: bolder 10pt Arial;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+A.tpl-menu-page:visited {
+	margin: 0 5px 0 5px; 
+	font: bolder 10pt Arial;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+A.tpl-menu-page:active {
+	margin: 0 5px 0 5px; 
+	font: bolder 10pt Arial;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+A.tpl-menu-page:hover {
+	margin: 0 5px 0 5px; 
+	font: bolder 10pt Arial;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/* -------------- */
+/* Menu category  */
+/* -------------- */
+DIV.tpl-menu-cat {
+	margin: 0;
+	padding: 0 5px 0px 5px;
+}
+DIV.tpl-menu-subcat {
+	margin: 7px 10px 0px 10px;
+	padding: 0px;
+}
+IMG.tpl-marker-cat {
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	border-style: none;
+}
+HR.tpl-menu-cat {
+	margin: 10px 0;
+	padding: 0px;
+}
+A.tpl-menu-cat:link {
+	font: bolder 10pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-menu-cat:visited {
+	font: bolder 10pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-menu-cat:active {
+	font: bolder 10pt Verdana;
+	color: #A00000;
+	text-decoration: none;
+}
+A.tpl-menu-cat:hover {
+	font: bolder 10pt Verdana;
+	color: #A00000;
+	text-decoration: none;
+}
+A.tpl-menu-subcat:link {
+	font: 10pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-menu-subcat:visited {
+	font: 10pt Verdana;
+	color: #000000;
+	text-decoration: none;
+}
+A.tpl-menu-subcat:active {
+	font: 10pt Verdana;
+	color: #C00707;
+	text-decoration: none;
+}
+A.tpl-menu-subcat:hover {
+	font: 10pt Verdana;
+	color: #C00707;
+	text-decoration: none;
+}
+/* Select menu */
+A.tpl-selmenu-cat:link {
+	font: bolder 10pt Verdana;
+	color: #279999;
+	text-decoration: none;
+}
+A.tpl-selmenu-cat:visited {
+	font: bolder 10pt Verdana;
+	color: #279999;
+	text-decoration: none;
+}
+A.tpl-selmenu-cat:active {
+	font: bolder 10pt Verdana;
+	color: #A00000;
+	text-decoration: none;
+}
+A.tpl-selmenu-cat:hover {
+	font: bolder 10pt Verdana;
+	color: #A00000;
+	text-decoration: none;
+}
+A.tpl-selmenu-subcat:link {
+	font: 10pt Verdana;
+	color: #278888;
+	text-decoration: none;
+}
+A.tpl-selmenu-subcat:visited {
+	font: 10pt Verdana;
+	color: #278888;
+	text-decoration: none;
+}
+A.tpl-selmenu-subcat:active {
+	font: 10pt Verdana;
+	color: #C00707;
+	text-decoration: none;
+}
+A.tpl-selmenu-subcat:hover {
+	font: 10pt Verdana;
+	color: #C00707;
+	text-decoration: none;
+}
+
+/* -------------- */
+/* Headline       */
+/* -------------- */
+DIV.tpl-headline {
+	margin: 0 0 10px 0;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: #277777;
+	text-align: left;
+	text-transform: uppercase;
+	font: bolder 12pt Tahoma;
+	color: #299999;
+}
+IMG.tpl-marker-headline {
+	width: 15px;
+	height: 10px;
+	margin: 0 5px 0 0;
+	border-style: none;
+}
+
+/* -------------- */
+/* Bookmarks      */
+/* -------------- */
+DIV.tpl-bookmark {
+	margin: 10px 0 10px 0;
+	text-align: center;
+}
+
+IMG.tpl-bookmark {
+	width: 95px;
+	
+	margin: 5px 0 5px 0;
+	background: #FFFFFF;
+	border-style: none;
+	border-width: 0px;
+	border-color: #FFFFFF;
+}
+.tpl-bookmarks IMG {
+  border-style: none !important;
+}
+A.tpl-bookmark:link {
+	font: 9pt Tahoma;
+	text-decoration: none;
+}
+A.tpl-bookmark:visited {
+	font: 9pt Tahoma;
+	text-decoration: none;
+}
+A.tpl-bookmark:active {
+	font: 9pt Tahoma;
+	text-decoration: none;
+}
+A.tpl-bookmark:hover {
+	font: 9pt Tahoma;
+	text-decoration: none;
+}
+
+/* -------------- */
+/* Bottom         */
+/* -------------- */
+A.tpl-creator:link {
+	font: 10pt Arial;
+	text-decoration: none;
+}
+A.tpl-creator:visited {
+	font: 10pt Arial;
+	text-decoration: none;
+}
+A.tpl-creator:active {
+	font: 10pt Arial;
+	text-decoration: underline;
+}
+A.tpl-creator:hover {
+	font: 10pt Arial;
+	text-decoration: underline;
+}
+
+
+p, li, span, td, style1, style2, style3, style4, style5, style6, style7, style8, style9, style10, style11, style12 {
+  font-size: 11pt !important;
+}
+
+p {
+  text-transform: none !important;
+  text-align: left !important;
+}

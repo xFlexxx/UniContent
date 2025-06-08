@@ -1,0 +1,117 @@
+/*****************************
+ Table's styles for all page
+ -----
+ Modify: 22.02.2007
+
+ *****************************/
+/* -------------- */
+/* Text           */
+/* -------------- */
+P {
+	text-align: justify;
+	padding: 5px;
+	margin: 0px;
+}
+H1 {
+	margin: 20px 0 20px 0;
+	font: bolder 12pt Tahoma;
+	color: #A00000;
+}
+H2 {
+	margin: 10px 0 10px 0;
+	font: bolder italic 11pt Tahoma;
+	color: #A00000;
+}
+H3 {
+	margin: 5px 0 5px 0;
+	font: bolder 10pt Tahoma;
+	color: #970202;
+}
+A:link {
+	font-weight: bold;
+	color: #303030;
+	text-decoration: underline;
+}
+A:visited {
+	font-weight: bold;
+	color: #303030;
+	text-decoration: underline;
+}
+A:active {
+	font-weight: bold;
+	color: #A00000;
+	text-decoration: underline;
+}
+A:hover {
+	font-weight: bold;
+	color: #A00000;
+	text-decoration: underline;
+}
+/* -------------- */
+/* Table          */
+/* -------------- */
+TABLE {
+	font: 12pt Arial;
+	border-style: none;
+	background: #FFFFFF;
+}
+TD {
+	margin: 0;
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	text-align: center;
+}
+TD.solid {
+	background: #FEF8EB;
+}
+TD.none-border {
+	padding: 10px;
+	border-style: none;
+	vertical-align: top;
+	text-align: left;
+}
+
+/* -------------- */
+/* List           */
+/* -------------- */
+UL { 
+	list-style: outside;
+	list-style-image: URL(../_images/marker.gif);
+}
+LI {
+	margin: 10px 0 10px 0;
+	text-align: justify;
+}
+
+/* -------------- */
+/* Delimiter      */
+/* -------------- */
+HR {
+	width: 100%;
+	margin: 5px 0 5px 0;
+	border-style: solid none none none;
+	border-width: 2px;
+	border-color: #DDDDDD;
+}
+DIV.hyperline {
+	width: 100%;
+	margin: 5px 0 5px 0;
+	text-align: right;
+	border-style: solid none none none;
+	border-width: 2px;
+	border-color: #DDDDDD;
+}
+
+/* -------------- */
+/* Image          */
+/* -------------- */
+IMG {
+	border-style: none none solid none;
+	border-width: 5px;
+	border-color: #277777;
+}
+IMG.none-border {
+	border-style: none;
+}
