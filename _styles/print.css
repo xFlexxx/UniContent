@@ -1,0 +1,61 @@
+BODY {
+	margin: 0.5cm;
+	padding: 0;
+	font: 12pt Times New Roman;
+}
+
+/* -------------- */
+/* Text           */
+/* -------------- */
+P {
+	text-align: justify;
+}
+H1 {
+	margin: 20px 0 20px 0;
+	font: bolder 14pt Arial;
+	color: #000000;
+}
+H2 {
+	margin: 10px 0 10px 0;
+	font: bolder italic 10pt Arial;
+	color: #000000;
+}
+H3 {
+	margin: 5px 0 5px 0;
+	font: bolder 12pt Arial;
+	color: #000000;
+}
+
+/* -------------- */
+/* List       */
+/* -------------- */
+LI {
+	margin: 0 0 10px 0;
+	text-align: justify;
+}
+
+/* -------------- */
+/* Tables         */
+/* -------------- */
+TABLE {
+	font: 12pt Times New Roman;
+	border-style: none;
+	background: #FFFFFF;
+}
+TD {
+	margin: 0;
+	padding: 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	text-align: center;
+}
+TD.solid {
+	background: #E8E8E8;
+}
+TD.none-border {
+	padding: 5px 5px 20px 5px;
+	border-style: none;
+	vertical-align: top;
+	text-align: left;
+}
