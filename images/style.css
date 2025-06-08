@@ -1,0 +1,36 @@
+A:link.left {
+	FONT-SIZE: 14px; COLOR: #0000FF; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: none
+}
+A:hover.left {
+	FONT-SIZE: 14px; COLOR: #CC0099; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: underline
+}
+A:active.left {
+	FONT-SIZE: 14px; COLOR: #0000FF; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: underline
+}
+A:visited.left {
+	FONT-SIZE: 14px; COLOR: #0000FF; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: none
+}
+A:link.top {
+	FONT-SIZE: 12px; COLOR: #0000FF; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: none
+}
+A:hover.top {
+	FONT-SIZE: 12px; COLOR: #CC0099; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: underline
+}
+A:active.top {
+	FONT-SIZE: 12px; COLOR: #0000FF; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: underline
+}
+A:visited.top {
+	FONT-SIZE: 12px; COLOR: #0000FF; FONT-FAMILY: Arial,Verdana,Helvetica; TEXT-DECORATION: none
+}
+A:link.poch {
+	 COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A:hover.poch {
+         COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A:active.poch {
+        COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A:visited.poch {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
