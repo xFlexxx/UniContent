@@ -84,7 +84,7 @@ define('ADMIN_MODE', true);  // Enable admin privileges
      php -S localhost:XXXX
      ```
 
-2. **Access the system in your browser:**
+2. **Access the system in your browser**
 </ol>
 
 ## ⚙️ System Requirements
