@@ -1,4 +1,5 @@
-# UniContent - CMS for SUSU System Programming Department
+# UniContent
+# CMS for SUSU System Programming Department
 
 **Simple content management system** designed for non-technical staff and professors to manage department website content effortlessly.
 
