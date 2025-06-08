@@ -1,0 +1,29 @@
+{
+    "Усольцев_Алексей_Евгеньевич": {
+        "fio": "Усольцев Алексей Евгеньевич",
+        "surname_variations": [
+            "Силкина",
+            "Silkina"
+        ],
+        "position": "Студент",
+        "degree": "Студент студент",
+        "phone": "(351) 267-90-89",
+        "email": "usoltsev@susu.ru",
+        "awards": [
+            {
+                "name": "много наград",
+                "link": "https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "name": "ещё больше наград",
+                "link": "https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ"
+            }
+        ],
+        "interests": "ogo",
+        "photo_width": "250",
+        "photo_height": "250",
+        "last_updated": "2025-06-08 03:26:58",
+        "updated_by": "admin",
+        "photo": "uploads\/profiles\/profile_683867cd941ae.jpg"
+    }
+}

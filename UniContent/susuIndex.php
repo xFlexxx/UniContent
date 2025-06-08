@@ -1,0 +1,837 @@
+
+<HTML>
+
+<!-- #BeginTemplate "_template/computer_page.dwt" -->
+
+<HEAD>
+  <META http-equiv="content-type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Language" content="ru">
+  <META name="keywords" content="ЮУрГУ, системное программирование, кафедра системного программирования, Омега, параллельные базы данных, Соколинский, Цымблер, Силкина, Алеева">
+
+  <!-- Подключение favicon -->
+  <LINK rel="shortcut icon" href="_images/favicon.ico" type="image/x-icon">
+
+  <LINK rel="stylesheet" type="text/css" href="_styles/common.css">
+
+  <!-- #BeginEditable "stylesheets" -->
+
+  <LINK rel="stylesheet" type="text/css" href="_styles/news.css">
+
+  <!-- #EndEditable -->
+  <LINK rel="stylesheet" type="text/css" href="_styles/template.css">
+
+  <!-- #BeginEditable "doctitle" -->
+<TITLE>
+&nbsp;Кафедра системного программирования ЮУрГУ :: Общая информация о кафедре
+</TITLE>
+  <style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .auto-style2 {
+	  color: blue;
+	  text-decoration: underline;
+  }
+  .auto-style3 {
+	  color: #0563C1;
+	  text-decoration: underline;
+  }
+  .auto-style5 {
+	  text-align: left;
+  }
+  .auto-style6 {
+	  font-size: 11pt;
+  }
+  .auto-style7 {
+	  font-weight: normal;
+  }
+  .auto-style8 {
+	  margin: 10px;
+  }
+  .auto-style9 {
+	  font-weight: bold;
+  }
+  </style>
+  <!-- #EndEditable -->
+
+  
+<!-- !@ МНБШЕ ЯРХКХ ДКЪ БШОЮДЮЧЫЕЦН ЛЕМЧ - ЛНФМН ХУ ОЕПЕМЕЯРХ Б ОНДЙКЧВЮЕЛСЧ РЮАКХЖС ЯРХКЕИ -->
+<style type="text/css">
+
+	DIV.tpl-menu-submenu {
+	position:absolute;
+	Z-Index:-5;
+	left:-300;
+		
+	font: 9pt Arial;
+	border-style: solid solid solid none;
+	background: #FFFFFF;
+	
+	margin: 0;
+	padding: 0 0 10px 0;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	vertical-align: top;
+	text-align: left;
+	}
+.auto-style1 {
+	margin-left: 0px;
+}
+</style>
+
+<!-- !@ ЙНД ДКЪ ПЮАНРШ Я ЛЕМЧ - РНФЕ ЛНФМН БШМЕЯРХ БН БМЕЬМХИ ТЮИК -->
+<script language="JavaScript">
+<!--
+//НАЗЪБКЕМХЕ (ЙНМЯРПСЙРНПЮ) ЙКЮЯЯЮ ОНДЛЕМЧ
+function Submenu (anchor_id, submenu_id, this_menu)
+{
+	this.MenuRef = this_menu;
+	this.ID = submenu_id;
+	//this.State = 11;
+				//0 for closed,
+				//1 for coming out,
+				//-1 for going in,
+				//2 for open,
+	this.SubmenuObj = document.getElementById(submenu_id);
+	var anchor = document.getElementById(anchor_id);
+	
+	//СЯРЮМНБЙЮ МЮВЮКЭМНИ ОНГХЖХХ, ХМХЖХЮКХГЮЖХЪ
+	this.x = anchor.offsetWidth + 1; // border:1
+	this.y = (-8);
+	
+	while (anchor != null)
+	{
+		this.x += anchor.offsetLeft;
+		this.y += anchor.offsetTop;
+		anchor = anchor.offsetParent;
+	}
+	
+	this.SubmenuObj.style.left = this.x - this.SubmenuObj.offsetWidth;
+	this.SubmenuObj.style.top = this.y;
+	this.SubmenuObj.style.clip = 'rect(' + (0) +','+ (this.SubmenuObj.offsetWidth) + ',' + (this.SubmenuObj.offsetHeight) +','+ (this.SubmenuObj.offsetWidth) +')';
+	this.State = 0;
+	
+	//"ЯРЕОЕМЭ НРЙПШРНЯРХ", МЕ ОПХБЪГЮМЮ Й ПЕЮКЭМШЛ ЙННПДХМЮРЮЛ, ХЯОНКЭГСЕРЯЪ ЙЮЙ ЮПЦСЛЕМР ОПХ ХУ БШВХЯКЕМХХ
+	this.Pos = 0;
+	//ДКЪ НРЛЕМШ НРКНФЕММНЦН ГЮЙПШРХЪ.
+	this.TimeoutID = 0;
+}
+Submenu.prototype = {
+	//нРНАПЮГХРЭ ОНДЛЕМЧ
+	Show : function () {
+		for (var Item in this.MenuRef.SubmenuList)
+		{
+			if (Item!=this.ID)
+				this.MenuRef.SubmenuList[Item].Hide();
+		}
+		clearTimeout(this.TimeoutID);
+		this.SubmenuObj.style.zIndex = 3;
+		this.State = 1;
+	},
+	
+	//МЕ САХПЮРЭ ОНДЛЕМЧ ОПХ МЮБЕДЕМХХ МЮ МЕЦН ЙСПЯНПЮ (ДКЪ АНПЭАШ Я ДБХФЙНЛ Opera)
+	ShowInt : function () {
+		if (this.State>=1)
+		{
+			for (var Item in this.MenuRef.SubmenuList)
+			{
+				if (Item!=this.ID)
+					this.MenuRef.SubmenuList[Item].Hide();
+			}
+			clearTimeout(this.TimeoutID);
+			
+			this.State = 1;
+			this.SubmenuObj.style.zIndex = 3;
+		}
+	},
+	
+	//сАПЮРЭ ОНДЛЕМЧ
+	Hide : function () {
+		this.SubmenuObj.style.zIndex = -5;
+		this.State = -1;
+		clearTimeout(this.TimeoutID);
+	},
+	
+	//НРКНФЕММШИ БШГНБ ТСМЙЖХХ Hide
+	HideAfter : function () {
+		var obj = this;
+		this.TimeoutID = setTimeout( function () { obj.Hide.call(obj) }, this.MenuRef.Timeout);
+	},
+	
+	//НРНАПЮФЕМХЕ ОНДЛЕМЧ МЮ МНБНЛ ЛЕЯРЕ - ДН БШГНБЮ МЕНАУНДХЛН ХГЛЕМХРЭ ГМЮВЕМХЕ ОНКЪ Pos
+	SetPos : function () {
+		/*	//ГДЕЯЭ ЛНФЕР АШРЭ, МЮОПХЛЕП, КХМЕИМЮЪ ТСМЙЖХЪ НР ОЮПЮЛЕРПЮ
+		this.SubmenuObj.style.left = this.x - ( ( this.SubmenuObj.offsetWidth*(100-this.Pos) ) / 100 );
+		this.SubmenuObj.style.clip = 'rect(' + (0) +','+ (this.SubmenuObj.offsetWidth) + ',' + (this.SubmenuObj.offsetHeight) +','+ (( this.SubmenuObj.offsetWidth*(100-this.Pos) ) / 100 ) +')';
+		*/
+		
+		//ХЯОНКЭГСЕРЯЪ ГЮБХЯХЛНЯРЭ ЙННПДХМЮРШ НР sqrt(Pos)
+		this.SubmenuObj.style.left = this.x - ( this.SubmenuObj.offsetWidth*(Math.sqrt(110)-Math.sqrt(this.Pos+10) ) ) / ( Math.sqrt(110) - Math.sqrt(10) );
+		this.SubmenuObj.style.clip = 'rect(' + (0) +','+ (this.SubmenuObj.offsetWidth) + ',' + (this.SubmenuObj.offsetHeight) +','+ ( this.SubmenuObj.offsetWidth*(Math.sqrt(110)-Math.sqrt(this.Pos+10) ) ) / ( Math.sqrt(110) - Math.sqrt(10) ) +')';
+	}
+}
+
+//НАЗЪБКЕМХЕ (ЙНМЯРПСЙРНПЮ) ЙКЮЯЯЮ ЛЕМЧ
+function Menu () 
+{
+	//гМЮВЕМХЕ, ОПХАЮБКЪЕЛНЕ/БШВХРЮЕЛНЕ ХГ Pos ОНДЛЕМЧ
+	this.Step = 5;
+	//ГЮДЕПФЙЮ ЛЕФДС ОПНПХЯНБЙНИ ЬЮЦНБ, Б ЛХККХЯЕЙСМДЮУ
+	this.Delay = 10;
+	//ГМЮВЕМХЕ, МЮ ЙНРНПНЕ НРЙКЮДШБЮЕРЯЪ ГЮЙПШРХЕ ОНДЛЕМЧ
+	this.Timeout = 500;
+	//ЮЯЯНЖХЮРХБМШИ ЛЮЯЯХБ ДКЪ УПЮМЕМХЪ БЯЕУ БУНДЪЫХУ Б ЛЕМЧ ОНДЛЕМЧ
+	this.SubmenuList = {};
+}
+Menu.prototype = {
+	//ЯНГДЮМХЕ МНБНЦН Х ДНАЮБКЕМХЕ ОНДЛЕМЧ Б ЯОХЯНЙ ДКЪ НАПЮАНРЙХ Х УПЮМЕМХЪ
+	AddSubmenu : function(anchor_id, submenu_id)
+	{
+		this.SubmenuList[submenu_id] = new Submenu(anchor_id, submenu_id, this)
+	},
+
+	//ОЕПЕЛЕЫЕМХЕ БЯЕУ ОНДЛЕМЧ Б ЯННРБЕРЯРБХХ Я ХУ ЯНЯРНЪМХЕЛ
+	Animate : function()
+	{
+		for (var Key in this.SubmenuList)
+		{
+			var tmp = this.SubmenuList[Key];
+			switch (tmp.State) 
+			{
+				case -1:
+						tmp.Pos = 0;
+						tmp.SetPos();
+						tmp.State = 0;
+										break;
+				case 0:
+					break;
+				case 1:
+						tmp.Pos = 100;
+						tmp.SetPos();
+						tmp.State = 2;
+										break;
+				case 2:
+					break;
+				default:
+					//еЯКХ ОПНЦПЮЛЛЮ ГЮЬКЮ ЯЧДЮ, РН ОПНХГНЬКЮ НЬХАЙЮ.
+					break;
+			}
+		}
+	},
+	
+	//БШГНБ, ЙНРНПШИ ГЮОСЯЙЮЕР РЮИЛЕП, ЯБЪГЮММШИ Я НРПХЯНБЙНИ ОЕПЕЛЕЫЕМХЪ
+	StartAnimate : function()
+	{
+		var obj = this;
+		setInterval( function () { obj.Animate.call(obj) }, this.Delay);
+	}
+}
+
+//ТСМЙЖХЪ, ЯНДЕПФЮЫЮЪ МЕНАУНДХЛШЕ ДКЪ ХМХЖХЮКХГЮЖХХ ПЮАНРШ БШГНБШ
+function init()
+{	
+	menu1 = new Menu();
+	menu1.AddSubmenu('submenu_anchor1','submenu1');
+	menu1.AddSubmenu('submenu_anchor2','submenu2');
+	menu1.AddSubmenu('submenu_anchor3','submenu3');
+	menu1.AddSubmenu('submenu_anchor4','submenu4');
+	menu1.AddSubmenu('submenu_anchor5','submenu5');
+	//menu1.AddSubmenu('submenu_anchor6','submenu6');
+	menu1.AddSubmenu('submenu_anchor7','submenu7');
+	menu1.AddSubmenu('submenu_anchor8','submenu8');
+	menu1.StartAnimate();
+}
+//-->
+</script>
+
+</HEAD>
+
+<!-- !@ БШГНБ ТСМЙЖХХ ХМХЖХЮКХГЮЖХХ -->
+<BODY onload="init();">
+  <A name="top"></A> 
+  
+  <!-- !@ НАЗЪБКЕМХЕ АКНЙНБ, ЯНДЕПФЮЫХУ ОНДЛЕМЧ -->
+	<DIV ID="submenu1" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu1'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu1'].HideAfter();">
+	  <DIV class="tpl-menu-subcat">
+		  <a class="tpl-menu-subcat" href="bachelor/index.html">
+		  Бакалавриат</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <a class="tpl-menu-subcat" href="master/index.html">
+		  Магистратура</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="postgrad/index.html">
+		  Аспирантура</a></DIV>
+
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="applicant/graduates.html">
+		  Наши выпускники</a></DIV>
+
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="applicant/recall.html">
+		  Отзывы выпускников</a></DIV>
+		
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="student/bachelorthesises.html">
+		  Выпускные работы бакалавров</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="student/masterthesises.html">
+		  Выпускные работы магистров</a></DIV>
+	</DIV>
+
+	<DIV ID="submenu2" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu2'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu2'].HideAfter();">
+	  <DIV class="tpl-menu-subcat">
+		  <a class="tpl-menu-subcat" href="student/courses/index.html">
+		  Практика и НИР</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <a class="tpl-menu-subcat" href="student/graduate/index_courseworks.html">
+		  Курсовые работы и проекты</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="student/graduate/index.html">
+		  Выпускникам</a></DIV>
+
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="student/job.html">
+		  Работа</a></DIV>
+		
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="student/masterthesises.html">
+		  Выпускные работы магистров</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="student/bachelorthesises.html">
+		  Выпускные работы бакалавров</a></DIV>
+	</DIV>
+	
+	<DIV ID="submenu3" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu3'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu3'].HideAfter();">
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Abdullaev.html" class="tpl-menu-subcat">Абдуллаев С.М.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Аверин А.С.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Аботалеб М.С.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Alaasam.html" class="tpl-menu-subcat">Алаасам А.Б.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Aleev.html" class="tpl-menu-subcat">Алеев Р.Ж.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Aleeva.html" class="tpl-menu-subcat">Алеева В.Н.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Барабанщикова Н.И.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Баскаков Д.М.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Беседин К.Ю.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Borodulin.html" class="tpl-menu-subcat">Бородулин К.В.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Valkevich.html" class="tpl-menu-subcat">Валькевич Н.В.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Ан Ф.Т.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Асяев Г.Д.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Ахмад Т.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Бастрыкина К.В.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Валиулин А.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Блинова Е.М.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Бурая А.А.</a></DIV-->
+				<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Быков Н.С.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Варкентин В.В.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://verman.susu.ru" class="tpl-menu-subcat">Верман П.Г.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Владимиров П.В.</a></DIV-->
+<!-- <DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Voevodin.html" class="tpl-menu-subcat">Воеводин В.В.</a></DIV>	-->	
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Володченко И.Д.</a></DIV>
+<!-- <DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Горских А.Г.</a></DIV> -->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Gerenshtein.html" class="tpl-menu-subcat">Геренштейн А.В.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Геренштейн Р.М.</a></DIV>
+				<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Golodov.html" class="tpl-menu-subcat">Голодов В.А.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Глизница М.Н.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Гоглачев А.И.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Голиков М.С.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Гудков В.Ю.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Dolganina.html" class="tpl-menu-subcat">Долганина Н.Ю.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Ежова Н.А.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Ibryaeva.html" class="tpl-menu-subcat">Ибряева О.Л.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Жулев А.Э.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Ivanov.html" class="tpl-menu-subcat">Иванов С.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://foreva.susu.ru/" class="tpl-menu-subcat">Иванова Е.В.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Ivanova.html" class="tpl-menu-subcat">Иванова О.Н.</a></DIV>		
+<!--		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Козина А.М.</a></DIV> -->		
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Klebanov.html" class="tpl-menu-subcat">Клебанов И.И.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://kps.susu.ru/" class="tpl-menu-subcat">Костенецкий П.С.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Костромитин К.И.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Краева Я.А.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Кубинец А.О.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://latipovaat.susu.ru/" class="tpl-menu-subcat">Латипова А.Т.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="https://sp.susu.ru/staff/Makarovskikh.html" class="tpl-menu-subcat">Макаровских Т.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Makovetskaya.html" class="tpl-menu-subcat">Маковецкая Т.Ю.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Манатин П.А</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Марков Б.А.</a></DIV>
+<!--		<DIV class="tpl-menu-subcat"><a href="http://mgm.susu.ru/" class="tpl-menu-subcat">Меженин М.Г.</a></DIV> -->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Молодорич М.И.</a></DIV-->
+<!--	<DIV class="tpl-menu-subcat"><a href="http://miniakhmetov.susu.ru" class="tpl-menu-subcat">Миниахметов Р.М.</a></DIV> -->
+<!--    <DIV class="tpl-menu-subcat"><a href="http://minia.susu.ru" class="tpl-menu-subcat">Миниахметова М.С.</a></DIV> -->
+<!--	<DIV class="tpl-menu-subcat"><a href="http://nenazhenko.ru" class="tpl-menu-subcat">Ненаженко Д.В.</a></DIV> -->
+<!--	<DIV class="tpl-menu-subcat"><a href="http://pcs.susu.ru/" class="tpl-menu-subcat">Пан К.С.</a></DIV> -->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Nikolskaya.html" class="tpl-menu-subcat">Никольская К.Ю.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Порозов А.С.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Ольховский Н.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Панюков А.В.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Петрова Л.Н.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Пушкарева М.В.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Островских Н.О.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Попонин О.М.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Постолова Д.А.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://glebradchenko.susu.ru/" class="tpl-menu-subcat">Радченко Г.И.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Repina.html" class="tpl-menu-subcat">Репина К.В.</a></DIV-->
+<!--    	<DIV class="tpl-menu-subcat"><a href="http://sau.susu.ru" class="tpl-menu-subcat">Сафонов А.Ю.</a></DIV> -->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Савченко Д.И.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Сейфер А.В.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Semenihina.html" class="tpl-menu-subcat">Семенихина П.Н.</a></DIV-->				
+		<!--IV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Семёнов А.И.</a></DIV-->	
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Сахарова А.А.</a></DIV>	
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Сидикова А.И.</a></DIV-->		
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Silkina.html" class="tpl-menu-subcat">Силкина Н.С.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Снегирева Д.А.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sok.susu.ru/" class="tpl-menu-subcat">Соколинский Л.Б.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Старков А.Е.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Sukhov.html" class="tpl-menu-subcat">Сухов М.В.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Сулейманов Д.Э.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff" class="tpl-menu-subcat">Сырвачев Д.А.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Tanana.html" class="tpl-menu-subcat">Танана В.П.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="https://sites.susu.ru/timchenkoms/" class="tpl-menu-subcat">Тимченко М.С.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Fedyanina.html" class="tpl-menu-subcat">Федянина Р.С.</a></DIV-->		
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Турлакова С.У.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Фомина А.А.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://mzym.susu.ru/" class="tpl-menu-subcat">Цымблер М.Л.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Ческидов П.Д.</a></DIV>
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Ческидова М.А.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Чулкевич Р.Э.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Чупахин К.Г.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Шабанов Т.Ю.</a></DIV>
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/Shablei.html" class="tpl-menu-subcat">Шаблей А.А.</a></DIV-->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Шангин Р.Э.</a></DIV-->
+<!--		<DIV class="tpl-menu-subcat"><a href="http://sham.susu.ru/" class="tpl-menu-subcat">Шамакина А.В.</a></DIV> -->
+		<!--DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/index.html" class="tpl-menu-subcat">Ширяев В.И.</a></DIV-->
+<!--        DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Шумаков А.О.</a></DIV-->
+		<DIV class="tpl-menu-subcat"><a href="http://sp.susu.ru/staff/" class="tpl-menu-subcat">Юртин А.А.</a></DIV>
+
+	</DIV>
+	
+	<DIV ID="submenu4" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu4'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu4'].HideAfter();">
+	  <DIV class="tpl-menu-subcat">
+		  <A href="bachelor/index.html" class="tpl-menu-subcat">
+		  Бакалавриат</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="master/index.html" class="tpl-menu-subcat">
+		  Магистратура</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="postgrad/index.html" class="tpl-menu-subcat">
+		  Аспирантура</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="study/metodmat.html#courses" class="tpl-menu-subcat">
+		  Учебно-методические разработки</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="study/metodmat.html#papers" class="tpl-menu-subcat">
+		  Учебно-методические публикации</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="study/index.html" class="tpl-menu-subcat">
+		  Методические материалы</A></DIV>
+		<DIV class="tpl-menu-subcat">
+			<A href="study/edususu.html" class="tpl-menu-subcat">
+		  Электронный ЮУрГУ</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="docs/zvonki.html" class="tpl-menu-subcat">
+		  Звонки</A></DIV>
+	</DIV>
+	
+	<DIV ID="submenu5" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu5'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu5'].HideAfter();">
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="science/index.html#research">
+		  Направления исследований</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="science/index.html#projects">Проекты</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		<a class="tpl-menu-subcat" href="science/metacomputing.html">
+		  Нацпроект &quot;Образование&quot;</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/grants.html" class="tpl-menu-subcat">
+		  Гранты</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/papers.html" class="tpl-menu-subcat">
+		  Публикации</A></DIV>
+<!-- 	<DIV class="tpl-menu-subcat"><A href="./../science/papers_elibrary.html" class="tpl-menu-subcat">
+		  РИНЦ</A></DIV> 
+-->
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/talks.html" class="tpl-menu-subcat">
+		  Участие в конференциях</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <a class="tpl-menu-subcat" href="science/dissertations.html">
+		  Диссертации</a></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/dissov.html" class="tpl-menu-subcat">
+		  Диссертационный совет</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/index.html#registered_programs" class="tpl-menu-subcat">
+		  Зарегистрированные программы</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/index.html#conf_prepared" class="tpl-menu-subcat">
+		  Организация конференций</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/index.html#progr_committee" class="tpl-menu-subcat">
+		  Участие в программных комитетах</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/index.html#sci_org" class="tpl-menu-subcat">
+		  Членство в научных организациях</A></DIV>
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/awards.html" class="tpl-menu-subcat">
+		  Дипломы, грамоты, награды</A></DIV>	  
+	  <DIV class="tpl-menu-subcat">
+		  <A href="science/training.html" class="tpl-menu-subcat">
+		  Стажировки</A></DIV>	  
+	  <DIV class="tpl-menu-subcat"><A href="http://itworkshop.susu.ru/" class="tpl-menu-subcat">
+		  Научный семинар</A></DIV>
+<!--
+	  <DIV class="tpl-menu-subcat"><A href="./../science/conferences.html" class="tpl-menu-subcat">
+		  Конференции</A></DIV>	  
+-->
+	</DIV>
+
+	<DIV ID="submenu6" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu6'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu6'].HideAfter();">
+	</DIV>
+
+	<DIV ID="submenu7" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu7'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu7'].HideAfter();">
+	</DIV>
+
+	<DIV ID="submenu8" class="tpl-menu-submenu" onMouseOver="menu1.SubmenuList['submenu8'].ShowInt();" onMouseOut="menu1.SubmenuList['submenu8'].HideAfter();">
+	</DIV>
+	
+  <TABLE class="tpl-skeleton" cellspacing="0">
+    <TR>
+      <TD rowspan="4" style="z-index: 25;" class="tpl-left-framegap">
+        <IMG src="_images/list_shadow.gif" width="30" height="100" class="tpl-list-shadow"></TD>
+
+      <TD class="tpl-logo" style="text-align: center">
+        <a href="http://sp.susu.ru/" title="Кафедра системного программирования Южно-Уральского государственного университета (Челябинск)">
+        <IMG src="_images/logo-sp.jpg" class="tpl-logo" width="120"></a></TD>
+      <TD class="tpl-header">
+        <DIV class="tpl-header">
+        	<A class="tpl-header" href="http://www.susu.ru/">Южно-Уральский 
+			государственный университет</A> (НИУ)<BR>
+        	<a class="tpl-header" href="http://eecs.susu.ru/">Высшая школа электроники и компьютерных наук</a><BR>
+        <SPAN class="tpl-header">КАФЕДРА СИСТЕМНОГО ПРОГРАММИРОВАНИЯ</SPAN></DIV></TD>
+
+      <TD class="tpl-menu-services">
+        <a href="http://sp.susu.ru">
+        <IMG src="_images/home.gif" alt="Перейти на первую страницу ..." class="tpl-menu-services" style="width: 22; height: 22"></a>
+        <a href="mailto:sp@susu.ru" title="Написать нам ...">
+        <IMG src="_images/mail.gif" alt="Написать нам ..." class="tpl-menu-services"></a>
+        <A href="map.html" title="Просмотреть карту сайта ...">
+        <IMG src="_images/map.gif" alt="Просмотреть карту сайта ..." class="tpl-menu-services"></A></TD>
+      <TD rowspan="4" class="tpl-right-framegap">  </TD>
+    </TR>
+
+    <TR>
+      <TD class="tpl-left-band">  </TD>
+      <TD class="tpl-menu-page">
+        <!--begin of Rambler's Top100 code -->
+        <a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?893203" alt="" width=1 height=1 border=0></a>
+        <!--end of Top100 code-->
+        <a class="tpl-menu-page" href="about.html">Общая информация</a>|
+        <!--A href="./../subscribe.html" class="tpl-menu-page">Подписка на новости</A>|-->
+        <a class="tpl-menu-page" href="news/news_index.php">Новости</a>|
+        <A href="smi.html" class="tpl-menu-page">СМИ о кафедре</A>|
+        <A href="docs/zvonki.html" class="tpl-menu-page">Звонки</A>|
+        </TD>
+
+      <TD class="tpl-right-band">  </TD>
+    </TR>
+    <TR>
+      <TD style="z-index: 25;" class="tpl-menu-cat">
+        <!-- begin Menu category -->
+
+         <DIV class="tpl-menu-cat" ID="submenu_anchor1" onMouseOver="menu1.SubmenuList['submenu1'].Show();" onMouseOut="menu1.SubmenuList['submenu1'].HideAfter();" style="position:relative; z-index:25">
+          <A href="applicant/index.html" class="tpl-menu-cat">Абитуриентам</A>        </DIV>
+            
+        <HR class="tpl-menu-cat">
+
+        <DIV class="tpl-menu-cat" ID="submenu_anchor2" onMouseOver="menu1.SubmenuList['submenu2'].Show();" onMouseOut="menu1.SubmenuList['submenu2'].HideAfter();" style="position:relative; z-index:25">
+          <a class="tpl-menu-cat" href="student/index.html">Студентам</a>
+              <IMG src="_images/marker_list.gif" class="tpl-marker-cat"></DIV>
+          <!-- БШМЕЯЕМН Б ОНДЛЕМЧ, ОПХ МЕНАУНДХЛНЯРХ БНЯЯРЮМНБХРЭ
+		  <DIV class="tpl-menu-subcat">
+			  <a class="tpl-menu-subcat" href="../student/courses/index.html">
+			  Практика</a></DIV>
+          <DIV class="tpl-menu-subcat">
+			  <a class="tpl-menu-subcat" href="../student/graduate/index_courseworks.html">
+			  Курсовые</a></DIV>
+          <DIV class="tpl-menu-subcat">
+			<a class="tpl-menu-subcat" href="../student/graduate/index.html">
+			Выпускникам</a></DIV>
+          <DIV class="tpl-menu-subcat">
+			<a class="tpl-menu-subcat" href="../student/job.html">
+			Работа</a></DIV>
+		  -->
+<HR class="tpl-menu-cat">
+        <DIV class="tpl-menu-cat" ID="submenu_anchor3" onMouseOver="menu1.SubmenuList['submenu3'].Show();" onMouseOut="menu1.SubmenuList['submenu3'].HideAfter();" style="position:relative; z-index:25">
+          <A href="staff/index.html" class="tpl-menu-cat">Сотрудники</A>
+
+              <IMG src="_images/marker_list.gif" class="tpl-marker-cat"></DIV>
+        <HR class="tpl-menu-cat">
+        <DIV class="tpl-menu-cat" ID="submenu_anchor4" onMouseOver="menu1.SubmenuList['submenu4'].Show();" onMouseOut="menu1.SubmenuList['submenu4'].HideAfter();" style="position:relative; z-index:25">
+          <A href="study/index.html" class="tpl-menu-cat">Учебная работа</A>
+              <IMG src="_images/marker_list.gif" class="tpl-marker-cat"></DIV>
+          <!-- БШМЕЯЕМН Б ОНДЛЕМЧ, ОПХ МЕНАУНДХЛНЯРХ БНЯЯРЮМНБХРЭ
+		  <DIV class="tpl-menu-subcat"><A href="./../bachelor/index.html" class="tpl-menu-subcat">Бакалавриат</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../master/index.html" class="tpl-menu-subcat">Магистратура</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../postgrad/index.html" class="tpl-menu-subcat">Аспирантура</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../metodmat.html" class="tpl-menu-subcat">Методические материалы</A></DIV>
+		  -->
+        <HR class="tpl-menu-cat">
+        <DIV class="tpl-menu-cat" ID="submenu_anchor5" onMouseOver="menu1.SubmenuList['submenu5'].Show();" onMouseOut="menu1.SubmenuList['submenu5'].HideAfter();" style="position:relative; z-index:25">
+
+          <A href="science/index.html" class="tpl-menu-cat">Научная работа</A>
+              <IMG src="_images/marker_list.gif" class="tpl-marker-cat"></DIV>
+          <!-- БШМЕЯЕМН Б ОНДЛЕМЧ, ОПХ МЕНАУНДХЛНЯРХ БНЯЯРЮМНБХРЭ
+          <DIV class="tpl-menu-subcat">
+			<a class="tpl-menu-subcat" href="../science/index.html#projects">Проекты</a></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../science/grants.html" class="tpl-menu-subcat">Гранты</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../science/papers.html" class="tpl-menu-subcat">Публикации</A></DIV>
+          <DIV class="tpl-menu-subcat">
+			  <a class="tpl-menu-subcat" href="../science/dissertations.html">
+			  Диссертации</a></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../science/talks.html" class="tpl-menu-subcat">Участие в конференциях</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../seminar/index.html" class="tpl-menu-subcat">Научный семинар</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../science/conferences.html" class="tpl-menu-subcat">Конференции</A></DIV>
+          <DIV class="tpl-menu-subcat"><A href="./../science/dissov.html" class="tpl-menu-subcat">Диссертационные советы</A></DIV>
+          -->
+        <HR class="tpl-menu-cat">
+
+        <DIV class="tpl-menu-cat" ID="submenu_anchor7" onMouseOver="menu1.SubmenuList['submenu7'].Show();" onMouseOut="menu1.SubmenuList['submenu7'].HideAfter();" style="position:relative; z-index:25; height: 16px;">
+            <a class="tpl-menu-cat" href="partners/index.html">Партнеры   </a></DIV>
+
+        <HR class="tpl-menu-cat">
+        <DIV class="tpl-menu-cat" ID="submenu_anchor8" onMouseOver="menu1.SubmenuList['submenu8'].Show();" onMouseOut="menu1.SubmenuList['submenu8'].HideAfter();" style="position:relative; z-index:25">
+          <A href="docs/index.html" class="tpl-menu-cat">Нормативные документы</A>
+              </DIV>
+        <!-- end Menu category --></TD>
+
+      <TD class="tpl-content">
+
+        <DIV class="tpl-headline">
+			<IMG src="_images/marker_headline.gif" class="tpl-marker-headline">
+        <!-- #BeginEditable "HeadLine" -->
+        ОБЩАЯ ИНФОРМАЦИЯ О КАФЕДРЕ
+        <!-- #EndEditable -->
+        </DIV>
+        
+        <!-- #BeginEditable "Content" -->
+				
+        <TABLE>
+          <TR>
+            <TD style="border-style: none !important;">
+			  <table cellpadding="0" cellspacing="0" style="width: 100%;font-size: 11pt;">
+				  <tr>
+					  <td valign="top" style="border-style: none !important; vertical-align: top;">
+        
+              		<p style="text-align: left; "><B>Заведующий кафедрой:</B><BR>
+              доктор физ.-мат. наук, профессор <a href="http://sok.susu.ru/">Л.Б. Соколинский</a> <br>
+              <b><span>Телефон:</span></b><span> (351) 272-30-80<o:p></o:p></span><br>
+              <b><span>Электронная почта:</span></b><span>&nbsp;<a href="mailto:Leonid.Sokolinsky@susu.ru"><b>Leonid.Sokolinsky@susu.ru</b></a><o:p></o:p></span></p>
+							
+<!--			<P style="text-align: left; ">
+              <B>Помощник заведующего кафедрой:</B><BR>
+              <a href="http://lbt.susu.ru/">К.В. Репина</a> 
+							(<a href="mailto:repinakv@susu.ru">repinakv@susu.ru</a>)
+-->
+							
+						<p class="MsoNormal"><b><span>Зам. заведующего:</span></b><span>
+							  <a href="http://sp.susu.ru/staff/Silkina.html"><b>
+							  Н.С. Силкина</b></a></span><br>
+					  <b><span>Телефон:</span></b><span> (351) 267-90-89<o:p></o:p></span><br>
+					  <b><span>Электронная почта:</span></b><span>
+					  <a href="mailto:silkinans@susu.ru"><b>silkinans@susu.ru</b></a><o:p></o:p></span></p>
+					  <p class="MsoNormal"><b><span>Ученый секретарь:</span></b><span>
+					  <a href="http://ivanovaon.susu.ru/"><b>И.Д.&nbsp;</b></a></span>
+					  <b><u><span><a href="http://ivanovaon.susu.ru/">Володченко&nbsp;</a></span></u></b><span><o:p></o:p></span><br>
+					  <b><span>Телефон:</span></b><span> (351) 267-90-89</span><br>
+					  <b><span>Электронная почта:</span></b><span lang="EN-US">&nbsp;<a href="mailto:volodchenkoid@susu.ru"><b><span>volodchenkoid</span><span lang="RU">@</span><span>susu</span><span lang="RU">.</span><span>ru</span></b></a></span></td>
+					  <td valign="top" style="border-style: none !important;">
+						
+					  <P style="text-align: left">
+            <b>Почтовый адрес:<br></b>
+					  Россия, 454080, г. Челябинск, пр. им. В.И. Ленина, 76, к. 
+					  477/3а<P style="text-align: left">
+              		<b><span>Телефон:</span></b><span> (351) 267-90-89</span><P style="text-align: left">
+              <B>Веб-страница:</B> 
+              <a href="http://sp.susu.ru/">http://sp.susu.ru/</a><B><br>Электронная почта:</B>
+              		<a href="mailto:sp@susu.ru">sp@susu<span lang="en-us">.</span>ru</a></td>
+				  </tr>
+			  </table>
+			  </TD>
+          </TR>
+        </TABLE>
+        
+<!-- BeginAnnounce -->
+<DIV class="tpl-headline">
+<IMG src="_images/marker_headline.gif" class="tpl-marker-headline">АНОНСЫ НОВОСТЕЙ</DIV>
+	<table width="100%">
+
+
+<tr>
+	<!-- NewsPlaceHolder1 -->
+</tr>
+<tr>
+	<!-- NewsPlaceHolder2 -->
+</tr>
+		<!--tr>
+			<td class="right-colomn">
+				<div class="news-date">[10.11.2018]</div><h1 class="news">На базе ЮУрГУ пройдет международная научная конференция 
+				&laquo;Цифровая индустрия: состояние и перспективы развития 2018&raquo;</h1><div class="preview">
+				<p>	<img alt="" src="https://www.susu.ru/sites/default/files/styles/large/public/field/image/logo_utverzhdyonnoe_0_0.png?itok=g43DbMGz" style="width: 120px; height: 117px; float: left; margin: 10px;" />
+				С 13 по 15 ноября на базе Южно-Уральского государственного университета, пройдет международная научная конференция &laquo;Цифровая индустрия: состояние и перспективы развития 2018&raquo;. Конференция организована и  проводится совместно с корпорацией Emerson (США) &#8211; мировым лидером в области цифровой индустрии. Целью конференции является обсуждение достижений мировых лидеров цифровой индустрии, ведущих университетов и научно-исследовательских центров в области разработки инновационных моделей, методов и технологий для &laquo;Индустрии 4.0&raquo;, и опыта их внедрения в крупных транснациональных и отечественных промышленных компаниях. С пленарными докладами на конференции выступят ведущие специалисты в области технологий &laquo;Индустрии 4.0&raquo; из России, США, Китая, Франции, Германии, Польши, Мексики, Португалии, Великобритании и Италии.</p>
+				</div><div class="link-fullnews"><a href="https://www.susu.ru/ru/news/2018/11/12/na-baze-proydet-mezhdunarodnaya-nauchnaya-konferenciya-cifrovaya-industriya">Подробнее...</a></div>			
+			</td>
+		</tr-->
+	</table>
+
+  <!--?require("news/content.php");?-->
+<P><A href="/news/news_index.php">Все новости</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A href="/news/p1_news.html">Архив новостей</A>
+</P>
+<!-- EndAnnounce -->
+
+        <!-- #EndEditable --> &nbsp;</TD>
+
+      <TD class="tpl-bookmarks">
+        <!-- begin Bookmarks -->
+        <DIV class="tpl-bookmark">
+            <br>
+            <a href="http://www.susu.ru" target="_blank" title="Южно-Уральский государственный университет (национальный исследовательский университет)">
+              <img alt="Южно-Уральский государственный университет" src="_images/logo_susu.jpg" style="border-style:none;" width="100" class="auto-style1"></a></div>
+        <HR>
+              
+        <DIV class="tpl-bookmark">
+            <a href="http://eecs.susu.ru/" target="_blank" title="Высшая школа электроники и компьютерных наук Южно-Уральского государственного университета">
+			<img alt="" src="images/eecs_logo.gif" width="100"></a>
+			<!--a class="tpl-bookmark" href="http://http://eecs.susu.ru/" target="_blank" title="Южно-Уральский государственный университет (национальный исследовательский университет)">
+			ВШ ЭКН</a-->
+		</DIV>
+			<HR>
+         
+<!--   
+        <DIV class="tpl-bookmark">
+            <a href="http://russianscdays.org/" title="Международная конференция &quot;Суперкомпьютерные дни в России&quot; (28-29 сентября 2015 г., Москва)">
+				<img alt="" height="95" src="../images/Russianscdays_logo.jpg" width="100"></a><br>
+			<a class="tpl-bookmark" href="http://russianscdays.org/" title="Международная конференция &quot;Суперкомпьютерные дни в России&quot; (28-29 сентября 2015 г., Москва)">
+			Научная конференция</a>
+		</DIV>
+-->
+        <DIV class="tpl-bookmark">
+            <a href="https://ПаВТ.РФ/" title="Международная конференция &quot;Параллельные вычислительные технологии (ПаВТ)&quot;">
+				<img alt="" height="89" src="images/PCT2017.jpg" width="100"></a><br>
+				<a class="tpl-bookmark" href="https://ПаВТ.РФ/" title="Международная конференция &quot;Параллельные вычислительные технологии (ПаВТ)&quot;">
+			Конференция ПаВТ</a>
+		</DIV>
+       <HR>      	 
+       <DIV class="tpl-bookmark">
+            <a href="http://supercomputer.susu.ru/" title="Лаборатория суперкомпьютерного моделирования Южно-Уральского государственного университета">
+              <img style="border-style:none;" alt="Лаборатория суперкомпьютерного моделирования ЮУрГУ" src="_images/LSM_logo.png" width="100"></a>
+        </DIV>
+        <HR>    
+        <DIV class="tpl-bookmark">   
+        	<a href="http://superfri.org/" title="Supercomputing Frontiers and Innovations. An International Journal">
+				<img alt="Supercomputing Frontiers and Innovations. An International Journal" height="100" src="images/JSFI.png" width="100"></a>
+			<a class="tpl-bookmark" href="http://superfri.org/" title="Supercomputing Frontiers and Innovations. An International Journal">
+				<br>Supercomputing Frontiers and Innovations</a><br>	
+		<HR>      
+        <DIV class="tpl-bookmark">
+            <a href="http://vestnik.susu.ru/cmi" title="Научный журнал &quot;Вестник ЮУрГУ&quot;. Серия &quot;Вычислительная математика и информатика&quot;">
+            <img alt="" src="_images/VestnikVMI_logo.png" width="120"></a><br>
+        </DIV>
+        <HR>
+        <DIV class="tpl-bookmark">
+            <a href="http://itworkshop.susu.ru/" title="Научный семинар">
+				<img height="65" alt="Научный семинар" src="_images/it_workshop.jpg" width="75"></a>
+			<a class="tpl-bookmark" href="http://itworkshop.susu.ru/" title="Научный семинар">
+				<br>Научный семинар</a>
+		</DIV>
+        <HR>
+        <DIV class="tpl-bookmark">
+            <a href="http://russianscdays.org/" title="Суперкомпьютерные дни в России">
+				<img alt="Суперкомпьютерные дни в России" src="http://russianscdays.org/files/rsd-80.png" width="120"></a>
+			<a class="tpl-bookmark" href="http://russianscdays.org/" title="Суперкомпьютерные дни в России">
+				<br>Суперкомпьютерные дни в России</a>
+		</DIV>
+        <!--HR>
+        <DIV class="tpl-bookmark">
+            <a href="https://glosic.susu.ru" title="Global Smart Industry Conference">
+				<img alt="Global Smart Industry Conference" src="https://i2.wp.com/sites.susu.ru/i40/wp-content/uploads/sites/36/2018/04/logotip-smart-conf.png" width="80"></a>
+			</DIV-->
+<!--
+        	<br>
+            <a href="http://supercomputer.susu.ru/niu/" title="Национальный исследовательский университет ЮУрГУ. Приоритетное направление развития 5 &quot;Суперкомпьютерные и грид-технологии для решения проблем энерго- и ресурсосбережения&quot;">
+			<img height="74" src="../images/niu_susu_logo.png" width="70"></a><br>
+			<a class="tpl-bookmark" href="http://supercomputer.susu.ru/niu/" title="Национальный исследовательский университет ЮУрГУ. Приоритетное направление развития 5 &quot;Суперкомпьютерные и грид-технологии для решения проблем энерго- и ресурсосбережения&quot;">
+			НИУ ЮУрГУ<BR>ПНР-5</a>
+-->
+		<!--HR>
+		<DIV class="tpl-bookmark">
+            <a class="tpl-bookmark" href="http://bit.susu.ru/" title="ИТ библиография">
+        	  <IMG alt="ИТ библиография" Src="./../_images/bibl_logo.gif"></a>
+        	  <a class="tpl-bookmark" href="http://bit.susu.ru/" title="ИТ библиография">
+        	  <BR>ИТ<BR>библиография</a>
+        </DIV-->
+<!--
+        <HR>
+        <DIV class="tpl-bookmark">
+          <A class="tpl-bookmark" href="http://parallelschool.susu.ru/" title="Школа параллельного программирования">
+          <IMG alt="Школа параллельного программирования" Src="./../_images/parallelschool_logo.gif"></a>
+          <a class="tpl-bookmark" href="http://parallelschool.susu.ru/" title="Школа параллельного программирования">
+          <BR>Школа параллельного программирования</A><br>
+-->
+        <!--HR>
+            <a href="http://hpcedu.susu.ru/" title="Уральский Научно-образовательный центр суперкомпьютерных технологий (НОЦ &quot;СКТ-Урал&quot;)">
+			<img alt="Уральский Научно-образовательный центр суперкомпьютерных технологий (НОЦ &quot;СКТ-Урал&quot;)" height="88" src="../images/SKO-logo.png" width="103"></a>
+			<a class="tpl-bookmark" href="http://hpcedu.susu.ru/" title="Уральский Научно-образовательный центр суперкомпьютерных технологий (НОЦ &quot;СКТ-Урал&quot;)">
+			<BR>  НОЦ &quot;СКТ-Урал&quot;</a>
+        </DIV-->
+        <!-- end Bookmarks --></TD>
+    </TR>
+    <TR>
+      <TD class="tpl-creators">
+
+        Дизайн: <a class="tpl-creator" href="http://foreva.susu.ru/">Е.В. 
+		Аксенова</a></TD>
+      <TD class="tpl-copyright">
+        <strong>Copyright &copy;</strong> Кафедра системного программирования ЮУрГУ<BR>
+        <strong>Адрес:</strong>
+        Россия, 454080, г. Челябинск, пр. им. В.И. Ленина, 76, к. 477/3а <strong>
+		Телефоны:</strong> (351) 272-30-80 (заведующий), (351) 267-90-89 
+		(кафедра)<BR>
+
+        <strong>Веб-страница:</strong> http://sp.susu.ru/ <strong>
+		Электронная почта:</strong> sp@susu.ru</TD>
+      <TD class="tpl-counter">
+        <!--begin of Top100 logo>
+        <A href="http://top100.rambler.ru/top100/">
+        <IMG src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 style="border-style: none;"></A>
+        <end of Top100 logo -->
+
+      </TD>
+    </TR>
+  </TABLE>
+  
+</BODY>
+
+<!-- #EndTemplate -->
+
+</HTML>
