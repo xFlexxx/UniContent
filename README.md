@@ -2,7 +2,6 @@
 # CMS for SUSU System Programming Department
 
 **Simple content management system** designed for non-technical staff and professors to manage department website content effortlessly.
-
 ## 🌟 Key Features
 
 - 📝 Intuitive content management interface
@@ -89,11 +88,13 @@ define('ADMIN_MODE', true);  // Enable admin privileges
 </ol>
 
 ## ⚙️ System Requirements
+[<img src="images/PHP-logo.svg" width="80" alt="PHP Logo">](https://www.php.net/)
+
 PHP 7.0 or higher
 
 PHP LocalHost
-Web server (Apache/Nginx recommended)
 
+Web server (Apache/Nginx recommended)
 
 Write permissions for the output directories
 
@@ -105,3 +106,4 @@ Write permissions for the output directories
 <li>Lightweight authentication system</li>
 <li>Easy deployment with minimal dependencies</li>
 </ul>
+
