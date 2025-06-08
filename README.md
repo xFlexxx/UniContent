@@ -78,7 +78,7 @@ define('ADMIN_MODE', true);  // Enable admin privileges
 1. **Start the local server in the application directory:**
    - Navigate to the application directory:
      ```bash
-     cd UniContent
+     cd UniContent/UniContent
      ```
    - Start PHP development server (replace XXXX with your port number, e.g., 8000):
      ```bash
